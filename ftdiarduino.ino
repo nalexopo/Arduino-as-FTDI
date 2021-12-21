@@ -14,6 +14,7 @@ void setup() {
 }
 
 void loop() {
+   // USBUART tx ----> UART1 rx
 while( Serial2.available()) 
   {
     char c=0;
@@ -22,7 +23,7 @@ while( Serial2.available())
            
   }
 
-  // USBUART rx ----> UART1 tx
+  // USBUART rx <----- UART1 tx
   while( Serial.available()) 
   {
     char c=0;
